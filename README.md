@@ -1,68 +1,177 @@
-# Trabalho ORCID
-
-Documentação para a realização do Trabalho da Disciplina SCC0130 - Engenharia de Software, ministrada pelo Prof. Dr. Seiji Isotani.
+# Apresentação do Projeto ORCID
 
 ## Integrantes do Grupo
 - Tiago Chaves Bezerra Rocha - 14609637
 - Felipe da Costa Coqueiro - 11781361
 - Gustavo de Araújo Poffo - 13672849
 
+<<<<<<< HEAD
+## Integrantes do Grupo
+- Tiago Chaves Bezerra Rocha - 14609637
+- Felipe da Costa Coqueiro - 11781361
+- Gustavo de Araújo Poffo - 13672849
+
 ## 1. Requisitos Básicos
+=======
+---
+>>>>>>> origin/RCEI/v2--TestesWorkFlows
 
-### 1.1. Grupos
+## Introdução e Contextualização
+ORCID (Open Researcher and Contributor ID) é um identificador digital único para pesquisadores e autores acadêmicos. Ele resolve a ambiguidade nos nomes, garantindo um ID exclusivo para cada pesquisador.  
+Facilita o reconhecimento das contribuições científicas, integra dados de publicações e afiliações de forma segura e padronizada.
 
-O trabalho deverá ser feito em grupos de até 5 alunos. Os alunos de um mesmo grupo devem ser, preferencialmente, da mesma turma (horário).
+---
 
-### 1.2. Entrega
+## Motivação e Objetivos
+- Melhorar a usabilidade da plataforma ORCID, criando soluções inovadoras baseadas em sua API pública.
+- Entrevistar 3 professores para coleta de requisitos.
+- Desenvolver um produto (web, mobile ou desktop) que facilite a interação com dados do ORCID.
 
-A data de entrega final é dia DD/MM.
+---
 
-### 1.3. Plágio
+## Protótipo Interativo  
+Confira o protótipo interativo no Figma:  
+[Link para o protótipo no Figma](https://www.figma.com/design/zdev5naDktoL9UD3H1XAqw/RCEI-Versao-1.0.0?node-id=1-4&t=VZS7WbodEZNPjjQg-0)
 
-O uso de IA (ex: Chat GPT) para produção de código é incentivada, mas plágio não será tolerado.
+---
 
-## 2. Requisitos Técnicos
+## Executando o Projeto
 
-### 2.1. Contextualização
+Este projeto foi desenvolvido utilizando React com TypeScript.  Siga as instruções abaixo para executá-lo localmente:
 
-O [ORCID](https://orcid.org) (Open Researcher and Contributor ID) é um identificador digital único para pesquisadores e autores acadêmicos. Ele foi criado como um projeto open source, com o objetivo de resolver o problema de ambiguidade nos nomes dos autores em publicações científicas, garantindo que cada pesquisador tenha um ID exclusivo, independente de variações no nome, afiliações institucionais ou mudanças de carreira.
+### Pré-requisitos
 
-### 2.2. Motivação
+Certifique-se de ter o Node.js e o npm (ou yarn) instalados em seu sistema.  Você pode verificar se já os tem, executando os seguintes comandos no terminal:
 
-Embora o seja ORCID essencial para pesquisadores e acadêmicos, sua a interface e a usabilidade poderiam ser muito melhores. Além disso, é possível criar uma vasta gama de produtos e soluções em cima dele, tendo em vista que a [documentação](https://github.com/ORCID/ORCID-Source) da sua API é muito bem estruturada. Veja [como usar a API](/API.md).
+```bash
+node -v
+npm -v  # Ou yarn -v se preferir yarn
+```
 
-### 2.3. Objetivos
+Se não tiver o Node.js instalado, você pode baixá-lo em [https://nodejs.org/](https://nodejs.org/).  A instalação do Node.js geralmente inclui o npm.
 
-**Entrevistar 3 professores** para coletar e documentar requisitos e necessidades para o desenvolvimento de um produto que melhore a visualização, interação ou gestão dos dados fornecidos via API pública do ORCID; seguindo os padrões, os métodos, e as documentações discutidas na disciplina. 
+### Passos para Executar
 
-**Idealizar e desenvolver o produto**, que pode ser uma aplicação Web, Mobile, Desktop, etc.
+1.  **Clone o repositório:**
 
-### 2.4 Sugestões
+    ```bash
+    git clone [URL do seu repositório]
+    cd Frontend-RCEI
+    ```
 
-Seguem algumas sugestões de possíveis melhorias:
+2.  **Instale as dependências:**
 
-- Visualizar estatísticas das publicações.
-- Gerenciar publicações de forma mais visual e interativa.
-- Analisar rede acadêmica de colaborações.
-- Alertas e notificações (ex: citação de artigos, publicações).
+    ```bash
+    npm install  # Ou yarn install
+    ```
+    Este comando irá instalar todas as dependências listadas no arquivo `package.json`.
 
-## 3. Avaliação
+3.  **Configure as variáveis de ambiente (se necessário):**
 
-A nota de avaliação do trabalho será dada por:
+    Se o projeto utilizar variáveis de ambiente (por exemplo, chaves de API), crie um arquivo `.env` na raiz do projeto e defina as variáveis necessárias.  Exemplo:
 
-1. Documentação do Projeto (4):
-    - Plano do projeto. (0,5)
-    - Documento de requisitos e entrevistas. (2)
-    - Modelagem do software. (0,5)
-    - Casos de uso. (0,5)
-    - Casos de teste. (0,5)
+    ```
+    REACT_APP_API_KEY=sua_chave_api
+    ```
 
-2. Desenvolvimento (3):
-    - Seguir metodologia escolhida. (2)
-    - Organização das tarefas. (1)
+    Certifique-se de que este arquivo esteja adicionado ao `.gitignore` para evitar o commit de informações sensíveis.
 
-3. Produto (3):
-    - Atendimento às funcionalidades e requisitos. (1)
-    - Organização e documentação do código no GitHub. (0,5)
-    - Usabilidade e manutenabilidade. (0,5)
-    - Apresentação do produto. (1)
+4.  **Execute o projeto:**
+
+    Vá para branch RCEI/v1
+
+    4.1 Frontend
+    
+    Entre na pasta do Frontend
+
+    ```bash
+    cd frontend-RCEI
+    ```
+
+    Baixe as dependências
+
+    ```bash
+    npm install
+    ```
+
+    Rode localmente
+    
+    ```bash
+    npm run dev
+    ```
+
+    4.2 Backend
+
+    ```bash
+    cd backend RCEI-v1
+    ```
+
+    ```bash
+    node server.js
+    ```
+
+    Este comando irá iniciar o servidor de desenvolvimento do React.  Normalmente, o projeto estará disponível em `http://localhost:3000`.
+
+### Outros Comandos Úteis
+
+*   **Build para produção:**
+
+    ```bash
+    npm run build  # Ou yarn build
+    ```
+    Este comando criará uma versão otimizada do projeto para produção na pasta `build`.
+
+*   **Executar testes:**
+
+    ```bash
+    npm test  # Ou yarn test
+    ```
+
+*   **Executar o linter:**
+
+    ```bash
+    npm run lint  # Ou yarn lint (se você tiver um script "lint" definido no package.json)
+    ```
+
+### Notas Adicionais
+
+*   Certifique-se de que as configurações em `vite.config.ts`, `tailwind.config.ts`, `tsconfig.json`, etc., estejam corretas para o seu ambiente.
+*   Se você tiver problemas com dependências, tente limpar o cache do npm/yarn:
+
+    ```bash
+    npm cache clean --force  # Ou yarn cache clean
+    rm -rf node_modules  # Remova a pasta node_modules
+    npm install  # Ou yarn install novamente
+    ```
+
+*   Consulte a documentação do Create React App (ou Vite, dependendo de como o projeto foi criado) para obter informações adicionais sobre configuração e deployment: [https://create-react-app.dev/](https://create-react-app.dev/) (se Create React App) ou [https://vitejs.dev/](https://vitejs.dev/) (se Vite).
+
+
+## Configuração da API ORCID
+
+Para habilitar o login via ORCID no **frontend-RCEI**, é preciso registrar um cliente em [Developer Tools](https://orcid.org/developer-tools). A inscrição gratuita fornece um *Client ID* e permite definir as URLs de redirecionamento utilizadas durante a autenticação.
+
+Copie o arquivo de exemplo e crie um `.env` na pasta `frontend-RCEI`:
+
+```bash
+cp frontend-RCEI/.env.example frontend-RCEI/.env
+```
+
+Preencha o arquivo com:
+
+```bash
+VITE_ORCID_CLIENT_ID=<seu_client_id>
+VITE_ORCID_REDIRECT_URI=http://localhost:8080/auth/callback
+```
+
+Essas variáveis são utilizadas pelo `frontend-RCEI` durante o desenvolvimento local.
+
+### Escopos ORCID
+
+Para realizar o login e consultar publicações, financiamentos e revisões de pares,
+solicite o escopo `/authenticate` juntamente com `/read-public`.
+
+Separe os escopos por espaço no parâmetro `scope`.
+
+Se precisar acessar informações restritas do perfil inclua também o escopo
+`/read-limited`.
